@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SimilarWeb Pro API Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SimilarWeb Pro API Helper</h1>
+    
+    <div class="form-group">
+      <label for="domainInput">Domain Input:</label>
+      <textarea id="domainInput" rows="10" placeholder='支持三种格式：
+1. 单个域名：pptfans.cn
+2. 域名数组：["pptfans.cn", "example.com"]
+3. 特殊格式：
+{
+  "AI文本": {
+    "5118": {
+      "link": "https://www.5118.com/ai/articlegenius",
+      "desc": ["高质量SEO文章/提高搜索"]
+    }
+  }
+}'></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="fromDate">From Date:</label>
+      <input type="date" id="fromDate">
+    </div>
+
+    <div class="form-group">
+      <label for="toDate">To Date:</label>
+      <input type="date" id="toDate">
+    </div>
+
+    <button id="fetchData">Fetch Data</button>
+
+    <div class="result-container">
+      <h2>Response:</h2>
+      <pre id="response"></pre>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
